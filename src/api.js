@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // 1. Gateway ka live link (Localhost ko live URL se replace kiya)
-const API_BASE_URL = 'https://plastic-luciana-pitaji-de9b0472.koyeb.app';
+const API_BASE_URL = 'https://main-vilhelmina-pitaji-3748f171.koyeb.app';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
