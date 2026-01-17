@@ -82,7 +82,12 @@ const Dashboard = () => {
                 <p className="text-sm font-bold truncate">{customerData?.firstName} {customerData?.lastName}</p>
                 <span className="flex items-center gap-1.5 text-[9px] text-green-400 font-bold uppercase tracking-widest animate-pulse">● Secure</span>
              </div>
-             <button onClick={() => logout()} className="text-slate-400 hover:text-red-500 transition-colors"><LogOut size={18} /></button>
+             <button 
+  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} 
+  className="text-slate-400 hover:text-red-500 transition-colors"
+>
+  <LogOut size={18} />
+</button>
           </div>
         </div>
       </aside>
