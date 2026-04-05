@@ -39,9 +39,16 @@ const KycForm = ({ onKycComplete }) => {
 
     try {
       const token = await getAccessTokenSilently();
-      
-      localStorage.setItem("token", token);
-      await api.post('/customer-service/api/v1/customers', formData);
+
+await api.post(
+  '/customer-service/api/v1/customers',
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
 
       alert("Account Created Successfully! 🎉");
       onKycComplete(); 
