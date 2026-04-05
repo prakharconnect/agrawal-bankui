@@ -40,6 +40,8 @@ const KycForm = ({ onKycComplete }) => {
     try {
       const token = await getAccessTokenSilently();
 
+      console.log("Auth0 se Token aaya kya?:", token);
+
 await api.post(
   '/customer-service/api/v1/customers',
   formData,
