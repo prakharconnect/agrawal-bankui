@@ -38,7 +38,11 @@ const KycForm = ({ onKycComplete }) => {
     console.log("Sending Data to Backend:", formData); // Console mein check karna
 
     try {
-      const token = await getAccessTokenSilently();
+      const token = await getAccessTokenSilently({
+        authorizationParams: {
+          audience: 'https://bank-api', // Ye exact wahi hai jo aapne Auth0 Dashboard mein banaya hai
+        }
+      });
 
       console.log("Auth0 se Token aaya kya?:", token);
 
