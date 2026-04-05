@@ -134,7 +134,7 @@ await api.post(
             </div>
         </div>
 
-        <button disabled={loading} className="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary-light transition shadow-lg shadow-primary/20">
+        <button type="submit"  disabled={loading} className="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary-light transition shadow-lg shadow-primary/20">
             {loading ? "Processing..." : "Create Account"}
         </button>
       </form>
